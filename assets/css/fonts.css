@@ -175,6 +175,10 @@
 	font-size: 1.5rem;
 }
 
+.f-size-160 {
+	font-size: 1.6rem;
+}
+
 .line-height-80 {
 	line-height: 0.8rem;
 }
@@ -189,4 +193,8 @@
 
 .line-height-120 {
 	line-height: 1.2rem;
+}
+
+.line-height-220 {
+	line-height: 2.2rem;
 }
