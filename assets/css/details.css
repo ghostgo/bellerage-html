@@ -1,0 +1,29 @@
+.details-block {
+    box-sizing: border-box;
+    padding: 100px;
+    width: 100%;
+    height: 1080px;
+    background-color: #004060;
+}
+
+ol.details-list {
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    counter-reset: cardnr;
+    justify-content: center;
+}
+
+ol.details-list li {
+    width: 520px;
+    height: 270px;
+    counter-increment: cardnr;
+    position: relative;
+  }
+
+li:nth-child(4n) { background-color: #b8df4e }
+li:nth-child(4n + 1) { background-color: #4cbccb }
+li:nth-child(4n + 2) { background-color: #7197d3 }
+li:nth-child(4n + 3) { background-color: #f9c05d }
