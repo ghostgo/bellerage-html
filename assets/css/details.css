@@ -31,11 +31,12 @@ ol.details-list li {
     justify-content: space-between;
     position: relative;
     counter-increment: cardnr;
-  }
+}
 
 ol.details-list li::after {
     position: absolute;
-    bottom: 50px;
+    bottom: 45px;
+    right: 35px;
     content: counter(cardnr, decimal-leading-zero);
     font-weight: 700;
     font-size: 4.3rem;
@@ -58,13 +59,6 @@ ol.details-list li:nth-child(9n - 2)
 { background-color: #396d9533 }
 ol.details-list li:nth-child(9n - 1) 
 { background-color: #72a2c733 }
-
-.details-list__title {
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 1.9rem;
-    text-transform: uppercase;
-}
 
 .details-list__hr {
     width: 320px;

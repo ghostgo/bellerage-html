@@ -121,7 +121,7 @@ img {
     margin: 0;
 }
 
-a {
+/* a {
     color: #909090;
     outline: none;
     text-decoration: none;
@@ -135,7 +135,7 @@ a.black {
 a:hover,
 a.black:hover {
     color: #feaf3d;
-}
+} */
 
 /* ! BASIC */
 
@@ -161,41 +161,38 @@ p {
 }
 
 h1 {
-    font-weight: 700;
     text-transform: uppercase;
+    font-weight: 700;
     font-size: 4.4rem;
     line-height: 5.6rem;
     margin-bottom: 55px;
-    color: #000000;
+    color: #FFFFFF;
 }
 
 h2 {
-    font-size: 2.5rem;
-    line-height: 2.8rem;
-    margin-bottom: 20px;
-    color: #000000;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3.1rem;
+    color: #00334D;
 }
 
-h3 {
-    font-size: 2rem;
-    margin-bottom: 5px;
-    color: #000000;
+h2.bigger-header {
+    font-size: 4.4rem;
+    line-height: 5.6rem;
 }
+
+/* h3 { */
+    /* font-size: 2rem;
+    color: #000000; */
+/* } */
 
 h4 {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-    color: #000000;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.9rem;
+    line-height: 2.3rem;
+    color: #ffffff;
 }
-
-/* ul.bulleted li::before {
-    content: "\2588";
-    color: #feaf3d;
-    display: inline-block;
-    width: 1.2rem;
-} */
-
-
 
 button {
     font-size: 1rem;
@@ -220,24 +217,30 @@ button {
 button:hover {
     background: #bcd3e5;
 }
-button:active {
+
+button.blue-btn {
+    width: 260px;
+    height: 60px;
+    background: #00334D;
     color: #ffffff;
-    background: #004060;
+}
+button.blue-btn:hover {
+    background: #005783;
 }
 
 button.short {
     height: 50px;
 }
-button.sqaure {
+button.sqaure-btn {
     width: 60px;
     height: 60px;
     border: 2px solid #007ab7;
     background: none;
 }
-button.sqaure.white {
+button.sqaure-btn.sqaure-btn_white {
     border-color: #ffffff;
 }
-button.sqaure:hover {
+button.sqaure-btn:hover {
     background: #ffffffcc;
 }
 
@@ -349,11 +352,11 @@ button.sqaure:hover {
     text-decoration: underline;
 }
 
-.link {
+/* .link {
     text-decoration: underline;
     color: rgb(0, 0, 238);
     cursor: pointer;
-}
+} */
 
 .cursor-pointer {
     cursor: pointer;
@@ -579,6 +582,14 @@ button.sqaure:hover {
     align-items: flex-end;
 }
 
+.as-end {
+    align-self: flex-end;
+}
+
+.js-end {
+    justify-self: flex-end;
+}
+
 .shrink {
     min-width: 0;
     flex-shrink: 1;
@@ -640,8 +651,20 @@ button.sqaure:hover {
 
 /* ! MARGINS */
 
+.mb100 {
+    margin-bottom: 100px;
+}
+
+.mb60 {
+    margin-bottom: 60px;
+}
+
 .mb50 {
     margin-bottom: 50px;
+}
+
+.mb40 {
+    margin-bottom: 40px;
 }
 
 .mb30 {
@@ -674,6 +697,10 @@ button.sqaure:hover {
 
 .mt30 {
     margin-top: 30px;
+}
+
+.mr50 {
+    margin-right: 50px;
 }
 
 .mr40 {

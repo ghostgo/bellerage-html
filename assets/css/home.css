@@ -27,11 +27,11 @@
     left: 290px;
 }
 
-.home-block__pattern {
+.home-block__background {
     position: relative;
 }
 
-.home-block__pattern-img {
+.home-block__background-img {
     position: absolute;
     z-index: -1;
     width: 874px;
@@ -45,6 +45,9 @@
     height: 480px;
     background: #003047cc;
     padding: 40px;
+}
+.video-block.video-block_white {
+    background: #2a576e99;
 }
 
 .video-block__video {
@@ -60,4 +63,7 @@
     letter-spacing: 0.3rem;
     font-weight: 300;
     color: #007ab7;
+}
+.video-block__description_white {
+    color: #ffffff;
 }

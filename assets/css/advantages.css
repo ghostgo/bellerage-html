@@ -1,0 +1,43 @@
+.advantages-block {
+    box-sizing: border-box;
+    padding: 100px;
+    width: 100%;
+    height: 1080px;
+    background-color: #004060;
+    position: relative;
+    z-index: 1;
+}
+
+.advantages-block__percent {
+    font-weight: 700;
+    font-size: 4.7rem;
+    line-height: 4rem;
+    color: #004060;
+    text-shadow: 
+		-0   -2px 1px #56A3CA,
+		 0   -2px 1px #56A3CA,
+		-0    2px 1px #56A3CA,
+		 0    2px 1px #56A3CA,
+		-2px -0   1px #56A3CA,
+		 2px -0   1px #56A3CA,
+		-2px  0   1px #56A3CA,
+		 2px  0   1px #56A3CA,
+		-1px -2px 1px #56A3CA,
+		 1px -2px 1px #56A3CA,
+		-1px  2px 1px #56A3CA,
+		 1px  2px 1px #56A3CA,
+		-2px -1px 1px #56A3CA,
+		 2px -1px 1px #56A3CA,
+		-2px  1px 1px #56A3CA,
+		 2px  1px 1px #56A3CA,
+		-2px -2px 1px #56A3CA,
+		 2px -2px 1px #56A3CA,
+		-2px  2px 1px #56A3CA,
+		 2px  2px 1px #56A3CA,
+		-2px -2px 1px #56A3CA,
+		 2px -2px 1px #56A3CA,
+		-2px  2px 1px #56A3CA,
+		 2px  2px 1px #56A3CA;
+    /* -webkit-text-stroke: 2px #56A3CA; */
+    /* text-stroke: 2px #56A3CA; */
+}
