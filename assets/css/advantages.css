@@ -9,35 +9,27 @@
 }
 
 .advantages-block__percent {
+    margin-left: 130px;
     font-weight: 700;
     font-size: 4.7rem;
     line-height: 4rem;
     color: #004060;
-    text-shadow: 
-		-0   -2px 1px #56A3CA,
-		 0   -2px 1px #56A3CA,
-		-0    2px 1px #56A3CA,
-		 0    2px 1px #56A3CA,
-		-2px -0   1px #56A3CA,
-		 2px -0   1px #56A3CA,
-		-2px  0   1px #56A3CA,
-		 2px  0   1px #56A3CA,
-		-1px -2px 1px #56A3CA,
-		 1px -2px 1px #56A3CA,
-		-1px  2px 1px #56A3CA,
-		 1px  2px 1px #56A3CA,
-		-2px -1px 1px #56A3CA,
-		 2px -1px 1px #56A3CA,
-		-2px  1px 1px #56A3CA,
-		 2px  1px 1px #56A3CA,
-		-2px -2px 1px #56A3CA,
-		 2px -2px 1px #56A3CA,
-		-2px  2px 1px #56A3CA,
-		 2px  2px 1px #56A3CA,
-		-2px -2px 1px #56A3CA,
-		 2px -2px 1px #56A3CA,
-		-2px  2px 1px #56A3CA,
-		 2px  2px 1px #56A3CA;
-    /* -webkit-text-stroke: 2px #56A3CA; */
-    /* text-stroke: 2px #56A3CA; */
+    position: relative;
+    z-index: 0;
 }
+
+.advantages-block__percent::before {
+    content: '94%';
+    position: absolute;
+    -webkit-text-stroke: 0.3rem #56A3CA; /* Chris Coyier's favorite color! */
+    left: 0;
+    z-index: -1;
+}
+
+/* .advantages-block__percent-back {
+    position: absolute;
+    font-weight: 700;
+    font-size: 4.7rem;
+    line-height: 4rem;
+    color: #004060;
+} */
