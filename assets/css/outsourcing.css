@@ -4,6 +4,8 @@
     width: 100%;
     height: 1080px;
     background-color: #F5F5F5;
+    position: relative;
+    z-index: 1;
 }
 
 .outsourcing-block__tab {
@@ -39,7 +41,7 @@
     border-top: none;
     padding: 60px 0 0 60px;
     height: 640px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 .outsourcing-block__content-left {
@@ -118,4 +120,21 @@ ul.bulleted li::before {
 
 .outsourcing-block__download {
     width: 340px;
+}
+
+.outsourcing-block__tabs-accounting .v-line, .outsourcing-block__tabs-tax .v-line {
+    border-left: 2px solid #BCD3E5;
+    border-right: 2px solid #BCD3E5;
+    bottom: 0;
+    left: 0;
+    width: 1556px;
+    height: 270px;
+}
+
+.outsourcing-block__case-btn .v-line {
+    border-left: 2px solid #BCD3E5;
+    border-right: 2px solid #BCD3E5;
+    top: 0;
+    width: 258px;
+    height: 120px;
 }

@@ -1,0 +1,56 @@
+.contacts-block {
+    box-sizing: border-box;
+    padding: 100px 100px 65px;
+    width: 100%;
+    height: 1080px;
+    background-color: #004060;
+    position: relative;
+    z-index: 1;
+}
+
+.contacts-block__icons {
+    margin-bottom: 80px;
+}
+
+.contacts-block__icon {
+    width: 96px;
+    height: 96px;
+    border: 2px solid #005783;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.contacts-block__icon img {
+    height: 40px;
+}
+
+.contacts-block__icon:hover {
+    background-color: #005783;
+}
+
+.contacts-block__websites {
+    margin-bottom: 60px;
+}
+
+.contacts-block__address {
+    margin-bottom: 94px;
+}
+.contacts-block__address span {
+    color: #7DD3FF;
+}
+
+.contacts-block__background-img {
+    position: absolute;
+    z-index: -1;
+    width: 963px;
+    top: -20px;
+    left: -80px;
+}
+
+.contacts-block__copyright {
+    color: #2888C4;
+    font-size: 1.65rem;
+    margin-right: 85px;
+}

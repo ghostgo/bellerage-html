@@ -1,11 +1,11 @@
 .advantages-block {
     box-sizing: border-box;
-    padding: 100px;
+    padding: 100px 100px 60px;
     width: 100%;
     height: 1080px;
     background-color: #004060;
     position: relative;
-    z-index: 1;
+    z-index: 0;
 }
 
 .advantages-block__percent {
@@ -21,15 +21,99 @@
 .advantages-block__percent::before {
     content: '94%';
     position: absolute;
-    -webkit-text-stroke: 0.3rem #56A3CA; /* Chris Coyier's favorite color! */
+    -webkit-text-stroke: 0.3rem #56A3CA;
     left: 0;
     z-index: -1;
 }
 
-/* .advantages-block__percent-back {
+.advantages-block__description {
+	color: white;
+	font-weight: 400;
+	font-size: 1.62rem;
+	line-height: 2.20rem;
+}
+
+.advantages-block__header {
+	position: relative;
+	z-index: 0;
+	margin-bottom: 60px;
+}
+
+.advantages-block__header::after {
+	content: "11";
+	position: absolute;
+	font-weight: 700;
+	font-size: 51rem;
+	line-height: 38rem;
+	letter-spacing: -13rem;
+	top: -60px;
+	right: 160px;
+	color: #ffffff33;
+	-webkit-text-stroke: 3px white;
+	text-stroke: 3px white;
+	z-index: -1;
+}
+
+.advantages-block__background-img {
     position: absolute;
-    font-weight: 700;
-    font-size: 4.7rem;
-    line-height: 4rem;
-    color: #004060;
-} */
+    z-index: -2;
+    width: 934px;
+    bottom:  -300px;
+    left: -867px;
+}
+
+.advantages-block__list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+	z-index: 1;
+	position: relative;
+}
+
+.advantages-block__list li {
+    width: 520px;
+    height: 290px;
+    color: #ffffff;
+    padding: 60px 60px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.advantages-block__list li:nth-child(1) {
+	background-color: #396d9533;
+}
+.advantages-block__list li:nth-child(2) {
+	background-color: #72a2c733;
+}
+.advantages-block__list li:nth-child(3) { 
+	background-color: #396d9533;
+	order: 4;
+}
+.advantages-block__list li:nth-child(4) { 
+	background-color: #72a2c733;
+	order: 5; 
+}
+
+.navigation-block {
+	position: absolute;
+	bottom: 0;
+	left: 60px;
+	z-index: 1;
+}
+
+.navigation-block__segment {
+	transition: 0.3s;
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+	border: 2px solid #007AB7;
+}
+
+.navigation-block__segment:hover, .navigation-block__segment--active {
+	border: 2px solid #ffffff;
+	background-color: #ffffff;
+}

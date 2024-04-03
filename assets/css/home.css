@@ -18,17 +18,14 @@
 
 .home-block__text {
     position: relative;
+    margin-bottom: 55px;
     width: 950px;
 }
 
 .home-block__description {
     position: absolute;
-    bottom: 25px;
-    left: 290px;
-}
-
-.home-block__background {
-    position: relative;
+    bottom: -30px;
+    left: 300px;
 }
 
 .home-block__background-img {
@@ -66,4 +63,41 @@
 }
 .video-block__description_white {
     color: #ffffff;
+}
+
+.v-line {
+    position: absolute;
+    border-left: 2px solid #005783;
+    z-index: -1;
+}
+
+.home-block__price-btn .v-line {
+    border-left: 2px solid #005783;
+    border-right: 2px solid #005783;
+    height: 150px;
+    width: 258px;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.video-block .v-line {
+    border-left: 2px solid #005783;
+    border-right: 2px solid #005783;
+    width: 596px;
+    top: 0;
+    left: 0;
+    height: 780px;
+}
+
+.home-block__case-btn .v-line__left {
+    bottom: -160px;
+    left: 0;
+    height: 900px;
+}
+
+.home-block__case-btn .v-line__right {
+    top: 0;
+    left: 258px;
+    height: 220px;
 }
