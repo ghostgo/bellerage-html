@@ -1,11 +1,16 @@
 .contacts-block {
-    box-sizing: border-box;
-    padding: 100px 100px 65px;
     width: 100%;
     height: 1080px;
     background-color: #004060;
     position: relative;
-    z-index: 1;
+    z-index: 0;
+}
+
+.contacts-block__content {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 100px 0 65px;
+    border-right: 2px solid #005783;
 }
 
 .contacts-block__icons {
@@ -32,10 +37,12 @@
 
 .contacts-block__websites {
     margin-bottom: 60px;
+    margin-left: 5px;
 }
 
 .contacts-block__address {
     margin-bottom: 94px;
+    margin-left: 3px;
 }
 .contacts-block__address span {
     color: #7DD3FF;
@@ -43,7 +50,7 @@
 
 .contacts-block__background-img {
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     width: 963px;
     top: -20px;
     left: -80px;
@@ -53,4 +60,16 @@
     color: #2888C4;
     font-size: 1.65rem;
     margin-right: 85px;
+}
+
+.contacts-block__content .v-line {
+    top: 0;
+    right: 600px;
+    height: 1080px;
+}
+
+.contacts-block__icons .v-line {
+    top: 0;
+    left: 0;
+    height: 880px;
 }

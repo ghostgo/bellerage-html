@@ -10,7 +10,8 @@
     box-sizing: border-box;
     height: 100%;
     padding: 100px 0px 60px;
-    border: 2px solid #BCD3E5;
+    border-left: 2px solid #BCD3E5;
+    border-right: 2px solid #BCD3E5;
 }
 
 .principles-block__lists {
@@ -46,15 +47,7 @@
     left: -137px;
 }
 
-.video-block .v-line__left {
-    border-left: 2px solid #BCD3E5;
-    border-right: none;
-    width: 2px;
-    top: -250px;
-    height: 1080px;
-}
-
-.video-block .v-line__right {
+.principles-block__video .v-line {
     border-left: 2px solid #BCD3E5;
     border-right: none;
     width: 2px;

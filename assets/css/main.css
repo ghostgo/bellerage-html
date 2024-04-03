@@ -241,6 +241,7 @@ button.sqaure-btn.sqaure-btn_white:hover {
 
 .wrapper {
     max-width: 1560px;
+    height: 100%;
     margin-left: auto;
     margin-right: auto;
 }

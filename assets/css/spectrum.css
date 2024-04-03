@@ -1,13 +1,21 @@
 .spectrum-block {
-    box-sizing: border-box;
-    padding: 120px 0 60px;
     width: 100%;
     height: 1080px;
     background-color: #004060;
+    position: relative;
+    z-index: 0;
+}
+
+.spectrum-block__content {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 120px 0 60px;
+    border-left: 2px solid #005783;
+    border-right: 2px solid #005783;
 }
 
 .spectrum-list-item {
-    width: 520px;
+    width: 519px;
 }
 
 .spectrum-list-item:last-child {
@@ -30,4 +38,14 @@
     padding: 20px 60px 30px 60px;
     font-size: 1.1rem;
     line-height: 1.7rem;
+}
+
+.spectrum-block__content .v-line {
+    border-left: 2px solid #005783;
+    border-right: 2px solid #005783;
+    width: 518px;
+    top: 0;
+    left: 518px;
+    height: 1080px;
+    z-index: -1;
 }
