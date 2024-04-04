@@ -29,6 +29,13 @@
     background-color: #ffffff;
 }
 
+.navigation_white .navigation__link {
+    background-color: #D5E1EE;
+}
+.navigation_white .navigation__link--active, .navigation_white .navigation__link:hover {
+    background-color: #56A3CA;
+}
+
 .left-side {
     position: absolute;
     z-index: 1;
@@ -72,6 +79,7 @@
 }
 
 .home-block__body {
+    width: 100%;
     margin-bottom: 80px;
 }
 
@@ -426,6 +434,94 @@
     .home-block__case-btn .v-line__right {
         left: 154px;
         height: 117px;
+    }
+}
+
+@media all and (max-width: 961px) {
+    
+    .home-block {
+        width: 100%;
+        height: auto;
+    }
+    
+    .home-block__content {
+        box-sizing: border-box;
+        height: 100%;
+        /* padding: 100px 100px; */
+    }
+    
+    .home-block__header {
+        margin-bottom: 60px;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .home-block__price-btn {
+        width: 80%;
+        height: 50px;
+    }
+    
+    .home-block__body {
+        flex-direction: column;
+        margin-bottom: 80px;
+    }
+    
+    .home-block__text {
+        position: relative;
+        margin-bottom: 55px;
+        width: 100%;
+    }
+
+    .home-block__text h1 {
+        font-size: 5rem;
+    }
+    
+    .home-block__description {
+        position: static;
+    }
+    
+    .home-block__background-img {
+        width: 110%;
+        top: -40px;
+        left: -45px;
+    }
+    
+    .video-block {
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        height: auto;
+        padding: 30px;
+    }
+
+    .mobile-column {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .video-block__video {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    
+    .video-block__description {
+        font-size: 1.6rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .home-block__case-btn {
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .home-block__case-btn span {
+        font-size: 1.8rem;
+        line-height: normal;
+        text-align: center;
+    }
+    
+    .v-line {
+        display: none;
     }
 }
 

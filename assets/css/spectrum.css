@@ -137,6 +137,51 @@
     }
 }
 
+@media all and (max-width: 961px) {
+    .spectrum-block {
+        width: 100%;
+        height: auto;
+        
+        position: relative;
+        z-index: 0;
+    }
+
+    .spectrum-block__content {
+        box-sizing: border-box;
+        height: 100%;
+        padding: 60px 0 60px;
+        border: none;
+    }
+
+    .spectrum-list-item {
+        width: 100%;
+    }
+
+    .spectrum-list-item:last-child {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    .spectrum-list-item:last-child span {
+        font-size: 1.8rem;
+        line-height: normal;
+        text-align: center;
+    }
+
+    .spectrum-list-item__header {
+        padding: 10px 15px 10px 30px;
+        height: 50px;
+        font-size: 1.9rem;
+        line-height: normal;
+    }
+
+    .spectrum-list-item__body {
+        padding: 10px 40px 20px 40px;
+        font-size: 1.3rem;
+        line-height: normal;
+    }
+}
+
 /* @media all and (max-width: 1881px) {
     .spectrum-block {
         height: 1080px;

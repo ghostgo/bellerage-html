@@ -1,10 +1,56 @@
-function hideDetailsCards(detailsCards) {
-    for (let i = 0; i < detailsCards.length; i++) {
-        detailsCards[i].classList.remove('details-block__card-body--active');
+const whiteNavigationSections = [
+    'outsourcing-accounting',
+    'outsourcing-tax',
+    'principles'
+];
+
+function removeClassAll(elements, className) { 
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].classList.remove(className);
+    }
+}
+
+function highlightActiveSection(allSections) {
+    const navigation = document.querySelector('.navigation');
+    let activeSection = 'home';
+
+    allSections.forEach((current) => {
+        const scrollY = window.scrollY,
+            sectionHeight = current.offsetHeight,
+            sectionTop = current.offsetTop - (sectionHeight / 2),
+            sectionId = current.getAttribute('id');
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        document
+            .querySelector('.navigation__link a[href*="' + sectionId + '"]')
+            .classList.add('navigation__link--active');
+        activeSection = sectionId;
+        } else {
+        document
+            .querySelector('.navigation__link a[href*="' + sectionId + '"]')
+            .classList.remove('navigation__link--active');
+        }
+    });
+
+    if (whiteNavigationSections.includes(activeSection)) {
+        navigation.classList.add('navigation_white');
+    } else {
+        navigation.classList.remove('navigation_white');
     }
 }
 
 window.addEventListener('DOMContentLoaded', () => {
+
+    //! NAVIGATION
+
+    const allSections = document.querySelectorAll('section[id]');
+
+    highlightActiveSection(allSections);
+    window.addEventListener('scroll', () => {
+        highlightActiveSection(allSections);
+    });
+
+    //! DETAILS
     
     const detailsBlock = document.querySelector('.details-block__content'),
         detailsCardBlock = document.querySelector('.details-block__card-content'),
@@ -28,7 +74,7 @@ window.addEventListener('DOMContentLoaded', () => {
         detailsCloseBtns[i].addEventListener('click', () => {
             detailsCardBlock.classList.add('display-none');
             detailsBlock.classList.remove('display-none');
-            hideDetailsCards(detailsCards);
+            removeClassAll(detailsCards, 'details-block__card-body--active');
         });
     }
 
@@ -48,10 +94,19 @@ window.addEventListener('DOMContentLoaded', () => {
         detailsCards[currentDetailCard].classList.add('details-block__card-body--active');
     });
 
-    
+    //! IMG PARALLAX
 
-    // const mobileMql = window.matchMedia('(max-width: 961px)'),
-    // homeBg = document.querySelectorAll('.mouse_parallax'),
+    const mobileMql = window.matchMedia('(max-width: 961px)');
+    const parallaxElements = document.querySelectorAll('.mouse_parallax');
+
+    if (!mobileMql.matches)
+    for (let i = 0; i < parallaxElements.length; i++) {
+        window.addEventListener('mousemove', function (e) {
+        let x = e.clientX / window.innerWidth;
+        let y = e.clientY / window.innerHeight;
+        parallaxElements[i].style.transform = 'translate(-' + x * 20 + 'px, -' + y * 20 + 'px)';
+        });
+    }
 
     // menuBtn = document.querySelector('.menu__btn'),
     // menuList = document.querySelector('.menu__list'),
@@ -59,15 +114,6 @@ window.addEventListener('DOMContentLoaded', () => {
     // menuPopup = document.querySelector('.menu__popup'),
     // orderBtn = document.querySelectorAll('.solutions__toggle-popup'),
     // formPopup = document.querySelector('.solutions__popup');
-
-    // if (!mobileMql.matches)
-    // for (let i = 0; i < homeBg.length; i++) {
-    //     window.addEventListener('mousemove', function (e) {
-    //     let x = e.clientX / window.innerWidth;
-    //     let y = e.clientY / window.innerHeight;
-    //     homeBg[i].style.transform = 'translate(-' + x * 10 + 'px, -' + y * 10 + 'px)';
-    //     });
-    // }
 
     // menuBtn.addEventListener('click', () => {
     // if (mobileMql.matches)

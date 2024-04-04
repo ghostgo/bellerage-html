@@ -255,6 +255,64 @@ li.details-block__card-body::after {
     }
 }
 
+@media all and (max-width: 961px) {
+    .details-block {
+        box-sizing: border-box;
+        padding: 0 60px;
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .details-block__card-content {
+        height: 100%;
+        /* padding: 60px 40px 60px 60px; */
+    }
+    
+    .details-block__card-close-btn img {
+        height: 35px;
+    }
+    
+    .details-block__card-descr {
+        font-size: 2.25rem;
+        line-height: 3.4rem;
+        margin-right: 30px;
+    }
+    
+    .details-block__card-hr {
+        width: 1200px;
+        height: 1px;
+        margin: 0;
+        border: none;
+    }
+    
+    li.details-block__card-body {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: none;
+    }
+
+    .details-block__card-content.display-none {
+        display: block;
+    }
+    
+    li.details-block__card-body.details-block__card-body--active {
+        display: block;
+    }
+    
+    li.details-block__card-body::after {
+        position: absolute;
+        bottom: -60px;
+        right: 0;
+        font-weight: 700;
+        font-size: 4.3rem;
+        line-height: 3.5rem;
+        display: flex;
+        align-self: flex-end;
+    }
+}
+
 /* @media all and (max-width: 1561px) {
     .details-block {
         padding: 0 100px;
