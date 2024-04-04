@@ -15,7 +15,7 @@
 }
 
 .spectrum-list-item {
-    width: 519px;
+    width: calc(100% / 3 + 1px);
 }
 
 .spectrum-list-item:last-child {
@@ -49,3 +49,119 @@
     height: 1080px;
     z-index: -1;
 }
+
+@media all and (max-width: 1881px) {
+    .spectrum-block {
+        height: 907px;
+    }
+    
+    .spectrum-block__content {
+        padding: 84px 0 50px;
+    }
+    
+    .spectrum-list-item:last-child {
+        margin-top: 58px;
+    }
+    
+    .spectrum-list-item__header {
+        padding: 12px 29px 12px 50px;
+        height: 67px;
+    }
+    
+    .spectrum-list-item__body {
+        padding: 16px 50px 25px 50px;
+    }
+    
+    .spectrum-block__content .v-line {
+        width: 435px;
+        left: 435px;
+        height: 907px;
+    }
+}
+
+@media all and (max-width: 1561px) {
+    .spectrum-block {
+        height: 756px;
+    }
+    
+    .spectrum-block__content {
+        padding: 84px 0 42px;
+    }
+    
+    .spectrum-list-item:last-child {
+        margin-top: 49px;
+    }
+    
+    .spectrum-list-item__header {
+        padding: 10px 24px 10px 42px;
+        height: 56px;
+    }
+    
+    .spectrum-list-item__body {
+        padding: 14px 42px 21px 42px;
+    }
+    
+    .spectrum-block__content .v-line {
+        width: 362px;
+        left: 362px;
+        height: 756px;
+    }
+}
+
+@media all and (max-width: 1295px) {
+    .spectrum-block {
+        height: 648px;
+    }
+    
+    .spectrum-block__content {
+        padding: 72px 0 36px;
+    }
+    
+    .spectrum-list-item:last-child {
+        margin-top: 42px;
+    }
+    
+    .spectrum-list-item__header {
+        padding: 9px 21px 9px 36px;
+        height: 48px;
+    }
+    
+    .spectrum-list-item__body {
+        padding: 12px 36px 18px 36px;
+    }
+    
+    .spectrum-block__content .v-line {
+        width: 310px;
+        left: 310px;
+        height: 648px;
+    }
+}
+
+/* @media all and (max-width: 1881px) {
+    .spectrum-block {
+        height: 1080px;
+    }
+    
+    .spectrum-block__content {
+        padding: 120px 0 60px;
+    }
+    
+    .spectrum-list-item:last-child {
+        margin-top: 70px;
+    }
+    
+    .spectrum-list-item__header {
+        padding: 15px 35px 15px 60px;
+        height: 80px;
+    }
+    
+    .spectrum-list-item__body {
+        padding: 20px 60px 30px 60px;
+    }
+    
+    .spectrum-block__content .v-line {
+        width: 518px;
+        left: 518px;
+        height: 1080px;
+    }
+} */

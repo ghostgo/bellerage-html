@@ -17,20 +17,20 @@
 <body>
     <section id="home" class="home-block">
         <div class="wrapper position-relative">
-            <nav class="nav">
-                <ul class="column gap-20">
-                    <li class="nav-links nav-links--active"><a href="#home"></a></li>
-                    <li class="nav-links"><a href="#details"></a></li>
-                    <li class="nav-links"><a href="#outsourcing-accounting"></a></li>
-                    <li class="nav-links"><a href="#outsourcing-tax"></a></li>
-                    <li class="nav-links"><a href="#principles"></a></li>
-                    <li class="nav-links"><a href="#advantages"></a></li>
-                    <li class="nav-links"><a href="#spectrum"></a></li>
-                    <li class="nav-links"><a href="#contacts"></a></li>
+            <nav class="navigation">
+                <ul class="column gap-20 navigation__list">
+                    <li class="navigation__link navigation__link--active"><a href="#home"></a></li>
+                    <li class="navigation__link"><a href="#details"></a></li>
+                    <li class="navigation__link"><a href="#outsourcing-accounting"></a></li>
+                    <li class="navigation__link"><a href="#outsourcing-tax"></a></li>
+                    <li class="navigation__link"><a href="#principles"></a></li>
+                    <li class="navigation__link"><a href="#advantages"></a></li>
+                    <li class="navigation__link"><a href="#spectrum"></a></li>
+                    <li class="navigation__link"><a href="#contacts"></a></li>
                 </ul>
             </nav>
-            <div class="right-side-text">
-                <div><p>лидер по соотношению цена-качество <br>в финансовом и юридическом аутсорсинге</p></div>
+            <div class="left-side">
+                <div class="left-side__text"><p>лидер по соотношению цена-качество <br>в финансовом и юридическом аутсорсинге</p></div>
             </div>
             <div class="home-block__content">
                 <div class="row home-block__header">
@@ -43,7 +43,7 @@
                         <div class="v-line"></div>
                     </div>
                 </div>
-                <div class="row home-block__body">
+                <div class="row home-block__body width-100">
                     <div class="home-block__text">
                         <h1>Доступный аутсорсинг бухгалтерии и финансов международного <br> уровня</h1>
                         <span class="home-block__description white f-weight-400 f-size-160 line-height-220">За 25 лет работы с российскими и <br> международными клиентами мы накопили <br> опыт работы со всеми индустриями.</span>
@@ -125,7 +125,115 @@
                         <hr class="details-list__hr">
                     </li>
                 </ol>
-          </div>
+            </div>
+            <div class="details-block__card-content display-none">
+                <ol class="column height-100 details-block__card-list jc-sb">
+                    <li class="details-block__card-body" cardnr="01">
+                        <div class="row ai-start mb40 nowrap">
+                            <h4 class="bigger-header">Оптимизация затрат</h4>
+                            <div class="details-block__card-close-btn"><img src="assets/img/close.svg" alt="Закрыть"></div>
+                        </div>
+                        <p class="white details-block__card-descr">При прочих равных аутсорсинг всегда будет дешевле, чем свой штат бухгалтерии. 
+                            Снижение затрат  для крупного бизнеса обычно составляет 25–35%,  а для небольших компаний аутсорсинг оказывается  в 2-3 раза выгоднее. Помимо фонда оплаты труда,  
+                            с аутсорсингом вы экономите на социальных взносах,  обучении, аренде помещений, обслуживании серверов, лицензиях 1С и Консультант+ и пр.</p>
+                    </li>
+
+                    <li class="details-block__card-body" cardnr="02">
+                        <div class="row ai-start mb40 nowrap">
+                            <h4 class="bigger-header">Возможность сфокусироваться на основном бизнесе</h4>
+                            <div class="details-block__card-close-btn"><img src="assets/img/close.svg" alt="Закрыть"></div>
+                        </div>
+                        <p class="white details-block__card-descr">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, iste.</p>
+                    </li>
+
+                    <li class="details-block__card-body" cardnr="03">
+                        <div class="row ai-start mb40 nowrap">
+                            <h4 class="bigger-header">Доступ к лучшим практикам</h4>
+                            <div class="details-block__card-close-btn"><img src="assets/img/close.svg" alt="Закрыть"></div>
+                        </div>
+                        <p class="white details-block__card-descr">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, iste.</p>
+                    </li>
+
+                    <li class="details-block__card-body" cardnr="04">
+                        <div class="row ai-start mb40 nowrap">
+                            <h4 class="bigger-header">Оптимизация и автоматизация бизнес-процессов</h4>
+                            <div class="details-block__card-close-btn"><img src="assets/img/close.svg" alt="Закрыть"></div>
+                        </div>
+                        <p class="white details-block__card-descr">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, iste.</p>
+                    </li>
+
+                    <li class="details-block__card-body" cardnr="05">
+                        <div class="row ai-start mb40 nowrap">
+                            <h4 class="bigger-header">Доступ к компетенциям любого уровня и профиля</h4>
+                            <div class="details-block__card-close-btn"><img src="assets/img/close.svg" alt="Закрыть"></div>
+                        </div>
+                        <p class="white details-block__card-descr">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, iste.</p>
+                    </li>
+
+                    <li class="details-block__card-body" cardnr="06">
+                        <div class="row ai-start mb40 nowrap">
+                            <h4 class="bigger-header">Гибкость и масштабируемость</h4>
+                            <div class="details-block__card-close-btn"><img src="assets/img/close.svg" alt="Закрыть"></div>
+                        </div>
+                        <p class="white details-block__card-descr">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, iste.</p>
+                    </li>
+
+                    <li class="details-block__card-body" cardnr="07">
+                        <div class="row ai-start mb40 nowrap">
+                            <h4 class="bigger-header">Бесперебойный сервис</h4>
+                            <div class="details-block__card-close-btn"><img src="assets/img/close.svg" alt="Закрыть"></div>
+                        </div>
+                        <p class="white details-block__card-descr">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, iste.</p>
+                    </li>
+
+                    <li class="details-block__card-body" cardnr="08">
+                        <div class="row ai-start mb40 nowrap">
+                            <h4 class="bigger-header">Непредвзятость провайдера</h4>
+                            <div class="details-block__card-close-btn"><img src="assets/img/close.svg" alt="Закрыть"></div>
+                        </div>
+                        <p class="white details-block__card-descr">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, iste.</p>
+                    </li>
+
+                    <li class="details-block__card-body" cardnr="09">
+                        <div class="row ai-start mb40 nowrap">
+                            <h4 class="bigger-header">Ответственность и гарантии провайдера</h4>
+                            <div class="details-block__card-close-btn"><img src="assets/img/close.svg" alt="Закрыть"></div>
+                        </div>
+                        <p class="white details-block__card-descr">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, iste.</p>
+                    </li>
+
+                    <li class="details-block__card-body" cardnr="10">
+                        <div class="row ai-start mb40 nowrap">
+                            <h4 class="bigger-header">Конфиденциальность и защита данных</h4>
+                            <div class="details-block__card-close-btn"><img src="assets/img/close.svg" alt="Закрыть"></div>
+                        </div>
+                        <p class="white details-block__card-descr">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, iste.</p>
+                    </li>
+
+                    <li class="details-block__card-body" cardnr="11">
+                        <div class="row ai-start mb40 nowrap">
+                            <h4 class="bigger-header">Топ-3</h4>
+                            <div class="details-block__card-close-btn"><img src="assets/img/close.svg" alt="Закрыть"></div>
+                        </div>
+                        <p class="white details-block__card-descr">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, iste.</p>
+                    </li>
+
+                    <li class="details-block__card-body" cardnr="12">
+                        <div class="row ai-start mb40 nowrap">
+                            <h4 class="bigger-header">Лидер по соотношению цена/качество</h4>
+                            <div class="details-block__card-close-btn"><img src="assets/img/close.svg" alt="Закрыть"></div>
+                        </div>
+                        <p class="white details-block__card-descr">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, iste.</p>
+                    </li>
+
+                    <div class="row gap-20 ai-end">
+                        <button class="sqaure-btn details-block__card-prev-btn"><img src="assets/img/arrowLeft2.svg" alt="Следующая страница"></button>
+                        <button class="sqaure-btn details-block__card-next-btn"><img src="assets/img/arrowRight2.svg" alt="Предыдущая страница"></button>
+                        <hr class="details-block__card-hr">
+                    </div>
+
+                </ol>
+            </div>
         </div>
     </section>
 
@@ -178,7 +286,7 @@
                             <div class="outsourcing-block__price dark-blue">
                                 Стоимость: <span class="dark-blue f-weight-700 f-size-190">10 000 ₽</span>
                             </div>
-                            <button style="width: 340px;" class="blue-btn">
+                            <button class="blue-btn outsourcing-block__download">
                                 <img class="mr30" src="assets/img/arrowDown.svg">скачать презентацию
                             </button>
                         </div>
@@ -202,7 +310,7 @@
                 <ul class="row ai-stretch nowrap outsourcing-block__tabs-tax position-relative">
                     <li class="outsourcing-block__tab outsourcing-block__tab--active">Аудит и due-diligence</li>
                     <li class="outsourcing-block__tab">Налоговый консалтинг</li>
-                    <li class="outsourcing-block__tab">Трансформация финансовой отчетности(МСФО)</li>
+                    <li class="outsourcing-block__tab">Трансформация финансовой отчетности (МСФО)</li>
                     <div class="v-line"></div>
                 </ul>
                 <div class="row ai-start outsourcing-block__lists">
@@ -236,7 +344,7 @@
                             <div class="outsourcing-block__price dark-blue">
                                 Стоимость: <span class="dark-blue f-weight-700 f-size-190">10 000 ₽</span>
                             </div>
-                            <button style="width: 340px;" class="blue-btn">
+                            <button class="blue-btn outsourcing-block__download">
                                 <img class="mr30" src="assets/img/arrowDown.svg">скачать презентацию
                             </button>
                         </div>
@@ -510,7 +618,7 @@
                     </div>
                     <div class="v-line"></div>
                 </div>
-                <div class="contacts-block__websites ml5">
+                <div class="contacts-block__websites">
                     <h2 class="bigger-header mb30"><a class="underlined" href="https://belerage.com/ru">belerage.com/ru</a></h2>
                     <h2 class="bigger-header"><a class="underlined" href="https://lp.belerage.com">lp.belerage.com</a></h2>
                 </div>
@@ -530,5 +638,6 @@
         </div>
     </section>
 
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

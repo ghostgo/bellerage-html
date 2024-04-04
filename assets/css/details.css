@@ -17,16 +17,14 @@ ol.details-list {
     margin-inline: auto;
     display: flex;
     flex-wrap: wrap;
-
     list-style: none;
     counter-reset: cardnr;
     justify-content: center;
 }
 
 ol.details-list li {
-    width: 520px;
+    width: calc(100% / 3);
     height: 270px;
-    color: #ffffff;
     padding: 60px 50px 50px 60px;
     border: 2px solid #005783;
     border-bottom: none;
@@ -37,6 +35,15 @@ ol.details-list li {
     justify-content: space-between;
     position: relative;
     counter-increment: cardnr;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+ol.details-list li:hover, ol.details-list li:hover:nth-child(1n)  {
+    background-color: #F5F5F5;
+}
+ol.details-list li:hover h4 {
+    color: #004060;
 }
 
 ol.details-list li::after {
@@ -73,3 +80,218 @@ ol.details-list li:nth-child(9n - 1)
     border: none;
     background-color: #003651;
 }
+
+.details-block__card-content {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 60px 40px 60px 60px;
+    border: 2px solid #005783;
+    border-bottom: none;
+}
+
+.details-block__card-close-btn img {
+    cursor: pointer;
+    height: 35px;
+}
+
+.details-block__card-descr {
+    font-size: 2.25rem;
+    line-height: 3.4rem;
+    margin-right: 30px;
+}
+
+.details-block__card-hr {
+    width: 1200px;
+    height: 1px;
+    margin: 0;
+    border: none;
+    background-color: #003651;
+}
+
+li.details-block__card-body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+li.details-block__card-body.details-block__card-body--active {
+    display: block;
+}
+
+li.details-block__card-body::after {
+    position: absolute;
+    bottom: -60px;
+    right: 0;
+    content: attr(cardnr);
+    font-weight: 700;
+    font-size: 4.3rem;
+    line-height: 3.5rem;
+    color: #003651;
+    display: flex;
+    align-self: flex-end;
+}
+
+@media all and (max-width: 1881px) {
+    .details-block {
+        padding: 0 84px;
+        height: 907px;
+    }
+    
+    ol.details-list li {
+        height: 226px;
+        padding: 50px 42px 42px 50px;
+    }
+    
+    ol.details-list li::after {
+        bottom: 37px;
+        right: 29px;
+    }
+    
+    .details-list__hr {
+        width: 268px;
+    }
+
+    .details-block__card-content {
+        padding: 50px 33px 50px 50px;
+    }
+
+    .details-block__card-close-btn img {
+        height: 29px;
+    }
+
+    .details-block__card-descr {
+        margin-right: 25px;
+    }
+
+    .details-block__card-hr {
+        width: 1008px;
+    }
+
+    li.details-block__card-body::after {
+        bottom: -50px;
+    }
+
+}
+
+@media all and (max-width: 1561px) {
+    .details-block {
+        padding: 0 70px;
+        height: 756px;
+    }
+    
+    ol.details-list li {
+        height: 189px;
+        padding: 42px 35px 35px 42px;
+    }
+    
+    ol.details-list li::after {
+        bottom: 31px;
+        right: 14px;
+    }
+
+    .details-list__hr {
+        width: 224px;
+    }
+
+    .details-block__card-content {
+        padding: 42px 28px 28px 42px;
+    }
+
+    .details-block__card-close-btn img {
+        height: 24px;
+    }
+
+    .details-block__card-descr {
+        margin-right: 21px;
+    }
+
+    .details-block__card-hr {
+        width: 840px;
+    }
+
+    li.details-block__card-body::after {
+        bottom: -42px;
+    }
+}
+
+@media all and (max-width: 1295px) {
+    .details-block {
+        padding: 0 60px;
+        height: 648px;
+    }
+    
+    ol.details-list li {
+        height: 162px;
+        padding: 36px 30px 30px 36px;
+    }
+    
+    ol.details-list li::after {
+        bottom: 27px;
+        right: 21px;
+    }
+
+    .details-list__hr {
+        width: 192px;
+    }
+    .details-block__card-content {
+        padding: 36px 24px 36px 36px;
+    }
+
+    .details-block__card-close-btn img {
+        height: 21px;
+    }
+
+    .details-block__card-descr {
+        margin-right: 18px;
+    }
+
+    .details-block__card-hr {
+        width: 720px;
+    }
+
+    li.details-block__card-body::after {
+        bottom: -36px;
+    }
+}
+
+/* @media all and (max-width: 1561px) {
+    .details-block {
+        padding: 0 100px;
+        height: 1080px;
+    }
+    
+    ol.details-list li {
+        height: 270px;
+        padding: 60px 50px 50px 60px;
+    }
+    
+    ol.details-list li::after {
+        bottom: 45px;
+        right: 35px;
+    }
+
+    .details-list__hr {
+        width: 320px;
+    }
+
+    .details-block__card-content {
+        padding: 60px 40px 60px 60px;
+    }
+
+    .details-block__card-close-btn img {
+        height: 35px;
+    }
+
+    .details-block__card-descr {
+        margin-right: 30px;
+    }
+
+    .details-block__card-hr {
+        width: 1200px;
+    }
+
+    li.details-block__card-body::after {
+        bottom: -60px;
+    }
+} */
