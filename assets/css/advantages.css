@@ -70,12 +70,16 @@
 
 .advantages-block__list {
     width: 100%;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     list-style: none;
     justify-content: center;
 	z-index: 1;
 	position: relative;
+}
+
+.advantages-block__list--active {
+    display: flex;
 }
 
 .advantages-block__list li {

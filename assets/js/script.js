@@ -39,6 +39,31 @@ function highlightActiveSection(allSections) {
     }
 }
 
+function changeOutsourcingTabs(sectionId) {
+    const tabs = document.querySelectorAll('#' + sectionId + ' .outsourcing-block__tabs li'),
+        lists = document.querySelectorAll('#' + sectionId + ' .outsourcing-lists__services-block');
+    for (let i = 0; i < tabs.length; i++) {
+        tabs[i].addEventListener('click', () => {
+            for (let j = 0; j < tabs.length; j++) {
+                tabs[j].classList.remove('outsourcing-block__tab--active');
+                lists[j].classList.remove('outsourcing-lists__services-block--active');
+            }
+            tabs[i].classList.add('outsourcing-block__tab--active');
+            lists[i].classList.add('outsourcing-lists__services-block--active');
+        });
+    }
+}
+
+function changeOutsourcingServices(sectionId) {
+    const servicesList = document.querySelectorAll('#' + sectionId + ' .outsourcing-lists__services li');
+    for (let i = 0; i < servicesList.length; i++) {
+        servicesList[i].addEventListener('click', () => {
+            removeClassAll(servicesList, 'outsourcing-lists__service--active');
+            servicesList[i].classList.add('outsourcing-lists__service--active');
+        });
+    }
+}
+
 window.addEventListener('DOMContentLoaded', () => {
 
     //! NAVIGATION
@@ -65,6 +90,7 @@ window.addEventListener('DOMContentLoaded', () => {
         detailsList[i].addEventListener('click', () => {
             detailsBlock.classList.add('display-none');
             detailsCardBlock.classList.remove('display-none');
+            detailsCards[currentDetailCard].classList.remove('details-block__card-body--active');
             detailsCards[i].classList.add('details-block__card-body--active');
             currentDetailCard = i;
         });
@@ -94,23 +120,51 @@ window.addEventListener('DOMContentLoaded', () => {
         detailsCards[currentDetailCard].classList.add('details-block__card-body--active');
     });
 
-    //! ACCOUNTING
+    //! OUTSOURCING
 
-    const accountingTabs = document.querySelectorAll('.outsourcing-block__tabs-accounting li'),
-        accountingLeftLists = document.querySelectorAll('.outsourcing-block__lists_accounting .outsourcing-block__list-left');
-    let activeAccountingTab = document.querySelector('.outsourcing-block__tabs-accounting .outsourcing-block__tab--active'),
-        activeAccountingLeftList = document.querySelector('.outsourcing-block__lists_accounting .outsourcing-block__list-left--active');
+    changeOutsourcingTabs('outsourcing-accounting');
+    changeOutsourcingTabs('outsourcing-tax');
+    changeOutsourcingServices('outsourcing-accounting');
+    changeOutsourcingServices('outsourcing-tax');
 
-    for (let i = 0; i < accountingTabs.length; i++) {
-        accountingTabs[i].addEventListener('click', () => {
-            activeAccountingTab.classList.remove('outsourcing-block__tab--active');
-            accountingTabs[i].classList.add('outsourcing-block__tab--active');
-            activeAccountingTab = accountingTabs[i];
-            activeAccountingLeftList.classList.remove('outsourcing-block__list-left--active');
-            accountingLeftLists[i].classList.add('outsourcing-block__list-left--active');
-            activeAccountingLeftList = accountingLeftLists[i];
+    //! ADVANTAGES
+
+    const advantagesLists = document.querySelectorAll('.advantages-block__list'),
+        advantagesSegments = document.querySelectorAll('.navigation-block__segment'),
+        advantagesPrevBtn = document.querySelector('.navigation-block__prev-btn'),
+        advantagesNextBtn = document.querySelector('.navigation-block__next-btn');
+    let currentAdvantagesList = 0;
+
+    for (let i = 0; i < advantagesLists.length; i++) {
+        advantagesSegments[i].addEventListener('click', () => {
+            removeClassAll(advantagesSegments, 'navigation-block__segment--active');
+            advantagesSegments[i].classList.add('navigation-block__segment--active');
+            removeClassAll(advantagesLists, 'advantages-block__list--active');
+            advantagesLists[i].classList.add('advantages-block__list--active');
+            currentAdvantagesList = i;
         });
-    }    
+    }
+
+    advantagesPrevBtn.addEventListener('click', () => {
+        advantagesLists[currentAdvantagesList].classList.remove('advantages-block__list--active');
+        advantagesSegments[currentAdvantagesList].classList.remove('navigation-block__segment--active');
+        currentAdvantagesList--;
+        if (currentAdvantagesList < 0 || currentAdvantagesList > advantagesLists.length - 1)
+            currentAdvantagesList = advantagesLists.length - 1;
+        advantagesLists[currentAdvantagesList].classList.add('advantages-block__list--active');
+        advantagesSegments[currentAdvantagesList].classList.add('navigation-block__segment--active');
+    });
+
+    advantagesNextBtn.addEventListener('click', () => {
+        advantagesLists[currentAdvantagesList].classList.remove('advantages-block__list--active');
+        advantagesSegments[currentAdvantagesList].classList.remove('navigation-block__segment--active');
+        currentAdvantagesList++;
+        if (currentAdvantagesList < 0 || currentAdvantagesList > advantagesLists.length - 1)
+            currentAdvantagesList = 0;
+        advantagesLists[currentAdvantagesList].classList.add('advantages-block__list--active');
+        advantagesSegments[currentAdvantagesList].classList.add('navigation-block__segment--active');
+    });
+
 
     //! IMG PARALLAX
 

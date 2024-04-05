@@ -400,7 +400,7 @@ button.sqaure-btn.sqaure-btn_white:hover {
 
 .mouse_parallax {
     transition: all 0.1s ease;
-  }
+    }
 
 @media all and (max-width: 1881px) {
     html {
