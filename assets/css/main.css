@@ -497,6 +497,42 @@ button.sqaure-btn.sqaure-btn_white:hover {
     }
 }
 
+@media all and (max-width: 1110px) {
+    html {
+        font-size: 50%;
+    }
+
+    button {
+        width: 130px;
+        height: 30px;
+        padding: 0 10px;
+    }
+
+    button.blue-btn {
+        width: 130px;
+        height: 30px;
+    }
+
+    button.short {
+        height: 25px;
+    }
+    button.sqaure-btn {
+        width: 30px;
+        height: 30px;
+        border: 1px solid #007ab7;
+    }
+    button.sqaure-btn:hover {
+        border: 1px solid #ffffff;
+    }
+    button.sqaure-btn.sqaure-btn_white:hover {
+        border: 1px solid #00334D;
+    }
+    .wrapper {
+        max-width: 780px;
+    }
+
+}
+
 /* @media all and (max-width: 1561px) {
     html {
         font-size: 70%;
@@ -536,7 +572,7 @@ button.sqaure-btn.sqaure-btn_white:hover {
     }
 
     html {
-        font-size: 60%;
+        font-size: 70%;
     }
     section {
         width: 100%;
@@ -545,6 +581,10 @@ button.sqaure-btn.sqaure-btn_white:hover {
         scrollbar-width: thin;
         scrollbar-color: #003651 #ffffff;
         flex-direction: column;
+    }
+
+    h2 {
+        font-size: 3.5rem;
     }
 
     button {
@@ -558,7 +598,7 @@ button.sqaure-btn.sqaure-btn_white:hover {
     }
 
     button.blue-btn {
-        width: 260px;
+        width: 100%;
         height: 60px;
     }
 
@@ -709,6 +749,12 @@ button.sqaure-btn.sqaure-btn_white:hover {
 @media all and (max-width: 1295px) {
     .gap-20 {
         gap: 12px;
+    }
+}
+
+@media all and (max-width: 1110px) {
+    .gap-20 {
+        gap: 10px;
     }
 }
 
@@ -881,5 +927,47 @@ button.sqaure-btn.sqaure-btn_white:hover {
     
     .ml10 {
         margin-left: 6px;
+    }
+}
+
+@media all and (max-width: 1110px) {
+    .mb100 {
+        margin-bottom: 50px;
+    }
+
+    .mb50 {
+        margin-bottom: 25px;
+    }
+
+    .mb40 {
+        margin-bottom: 20px;
+    }
+
+    .mb30 {
+        margin-bottom: 15px;
+    }
+
+    .mb20 {
+        margin-bottom: 10px;
+    }
+
+    .mr50 {
+        margin-right: 25px;
+    }
+
+    .mr40 {
+        margin-right: 20px;
+    }
+
+    .mr30 {
+        margin-right: 15px;
+    }
+
+    .mr20 {
+        margin-right: 10px;
+    }
+
+    .ml10 {
+        margin-left: 5px;
     }
 }

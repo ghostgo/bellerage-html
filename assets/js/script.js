@@ -168,7 +168,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //! IMG PARALLAX
 
-    const mobileMql = window.matchMedia('(max-width: 961px)');
+    const mobileMql = window.matchMedia('(max-width: 1110px)');
     const parallaxElements = document.querySelectorAll('.mouse_parallax');
 
     if (!mobileMql.matches)
@@ -176,7 +176,7 @@ window.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('mousemove', function (e) {
         let x = e.clientX / window.innerWidth;
         let y = e.clientY / window.innerHeight;
-        parallaxElements[i].style.transform = 'translate(-' + x * 20 + 'px, -' + y * 20 + 'px)';
+        parallaxElements[i].style.transform = 'translate(-' + x * 15 + 'px, -' + y * 15 + 'px)';
         });
     }
 
