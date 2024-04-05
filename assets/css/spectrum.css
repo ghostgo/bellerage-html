@@ -137,6 +137,43 @@
     }
 }
 
+@media all and (max-width: 1110px) {
+    .spectrum-block {
+        height: 540px;
+    }
+    
+    .spectrum-block__content {
+        padding: 60px 0 30px;
+        border-left: 1px solid #005783;
+        border-right: 1px solid #005783;
+    }
+    
+    .spectrum-list-item {
+        width: calc(100% / 3);
+    }
+
+    .spectrum-list-item:last-child {
+        margin-top: 35px;
+    }
+    
+    .spectrum-list-item__header {
+        padding: 7px 17px 7px 30px;
+        height: 40px;
+    }
+    
+    .spectrum-list-item__body {
+        padding: 10px 30px 15px 30px;
+    }
+    
+    .spectrum-block__content .v-line {
+        border-left: 1px solid #005783;
+        border-right: 1px solid #005783;
+        width: 259px;
+        left: 259px;
+        height: 540px;
+    }
+}
+
 @media all and (max-width: 961px) {
     .spectrum-block {
         width: 100%;

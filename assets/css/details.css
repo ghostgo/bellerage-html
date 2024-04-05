@@ -255,18 +255,72 @@ li.details-block__card-body::after {
     }
 }
 
+@media all and (max-width: 1110px) {
+    .details-block {
+        padding: 0 50px;
+        height: 540px;
+    }
+    
+    ol.details-list li {
+        border: 1px solid #005783;
+        height: 135px;
+        padding: 30px 25px 25px 30px;
+    }
+    
+    ol.details-list li::after {
+        bottom: 22px;
+        right: 17px;
+    }
+
+    .details-list__hr {
+        width: 160px;
+    }
+
+    .details-block__card-content {
+        padding: 30px 20px 30px 30px;
+        border: 1px solid #005783;
+    }
+
+    .details-block__card-close-btn img {
+        height: 17px;
+    }
+
+    .details-block__card-descr {
+        margin-right: 15px;
+    }
+
+    .details-block__card-hr {
+        width: 600px;
+    }
+
+    li.details-block__card-body::after {
+        bottom: -30px;
+    }
+
+    ol.details-list li:nth-child(3n) 
+    { border-right: 1px solid #005783 }
+}
+
 @media all and (max-width: 961px) {
     .details-block {
-        box-sizing: border-box;
-        padding: 0 60px;
+        padding: 0;
         width: 100%;
-        height: auto;
-        min-height: 100vh;
+        height: 100vh;
+    }
+
+    .details-block__content {
+        display: none;
     }
     
     .details-block__card-content {
         height: 100%;
-        /* padding: 60px 40px 60px 60px; */
+        border: none;
+        padding: 50px 0;
+    }
+
+    .details-block__card-navigation {
+        justify-content: start;
+        width: 100%;
     }
     
     .details-block__card-close-btn img {
@@ -280,33 +334,22 @@ li.details-block__card-body::after {
     }
     
     .details-block__card-hr {
-        width: 1200px;
+        width: calc(100% - 220px);
         height: 1px;
         margin: 0;
         border: none;
-    }
-    
-    li.details-block__card-body {
-        position: relative;
-        height: 100%;
-        width: 100%;
-        display: none;
     }
 
     .details-block__card-content.display-none {
         display: block;
     }
     
-    li.details-block__card-body.details-block__card-body--active {
-        display: block;
-    }
-    
     li.details-block__card-body::after {
         position: absolute;
-        bottom: -60px;
+        bottom: -50px;
         right: 0;
         font-weight: 700;
-        font-size: 4.3rem;
+        font-size: 6.3rem;
         line-height: 3.5rem;
         display: flex;
         align-self: flex-end;
