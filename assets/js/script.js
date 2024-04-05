@@ -94,6 +94,24 @@ window.addEventListener('DOMContentLoaded', () => {
         detailsCards[currentDetailCard].classList.add('details-block__card-body--active');
     });
 
+    //! ACCOUNTING
+
+    const accountingTabs = document.querySelectorAll('.outsourcing-block__tabs-accounting li'),
+        accountingLeftLists = document.querySelectorAll('.outsourcing-block__lists_accounting .outsourcing-block__list-left');
+    let activeAccountingTab = document.querySelector('.outsourcing-block__tabs-accounting .outsourcing-block__tab--active'),
+        activeAccountingLeftList = document.querySelector('.outsourcing-block__lists_accounting .outsourcing-block__list-left--active');
+
+    for (let i = 0; i < accountingTabs.length; i++) {
+        accountingTabs[i].addEventListener('click', () => {
+            activeAccountingTab.classList.remove('outsourcing-block__tab--active');
+            accountingTabs[i].classList.add('outsourcing-block__tab--active');
+            activeAccountingTab = accountingTabs[i];
+            activeAccountingLeftList.classList.remove('outsourcing-block__list-left--active');
+            accountingLeftLists[i].classList.add('outsourcing-block__list-left--active');
+            activeAccountingLeftList = accountingLeftLists[i];
+        });
+    }    
+
     //! IMG PARALLAX
 
     const mobileMql = window.matchMedia('(max-width: 961px)');

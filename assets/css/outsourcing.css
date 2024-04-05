@@ -48,11 +48,16 @@
     margin-bottom: 50px;
 }
 
+.outsourcing-block__list-left.outsourcing-block__list-left--active {
+  display: block;
+}
+
 .outsourcing-block__list-left {
     width: 50%;
     height: 100%;
     box-sizing: border-box;
     padding: 0 60px 40px 0;
+    display: none;
 }
 
 .outsourcing-block__list-right {
@@ -63,7 +68,7 @@
     background-color: #72a2c733;
 }
 
-.outsourcing-block__services-accounting, .outsourcing-block__services-tax {
+.outsourcing-block__services {
     width: 65%;
     list-style: none;
     margin: 0;
@@ -174,7 +179,7 @@ button.outsourcing-block__download {
         padding: 33px 50px;
     }
     
-    .outsourcing-block__services-accounting, .outsourcing-block__services-tax {
+    .outsourcing-block__services {
         gap: 33px;
     }
     
@@ -243,7 +248,7 @@ button.outsourcing-block__download {
         padding: 28px 42px;
     }
     
-    .outsourcing-block__services-accounting, .outsourcing-block__services-tax {
+    .outsourcing-block__services {
         gap: 28px;
     }
     
@@ -312,7 +317,7 @@ button.outsourcing-block__download {
         padding: 24px 36px;
     }
     
-    .outsourcing-block__services-accounting, .outsourcing-block__services-tax {
+    .outsourcing-block__services {
         gap: 24px;
     }
     
