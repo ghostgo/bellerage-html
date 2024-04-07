@@ -402,7 +402,7 @@ button.sqaure-btn.sqaure-btn_white:hover {
     transition: all 0.1s ease;
     }
 
-@media all and (max-width: 1881px) {
+@media all and ( (max-width: 1881px) or (max-height: 984px) ) {
     html {
         font-size: 84%;
     }
@@ -435,7 +435,7 @@ button.sqaure-btn.sqaure-btn_white:hover {
     }
 }
 
-@media all and (max-width: 1561px) {
+@media all and ( (max-width: 1561px) or (max-height: 835px) ) {
     html {
         font-size: 70%;
     }
@@ -734,7 +734,7 @@ button.sqaure-btn.sqaure-btn_white:hover {
     gap: 20px;
 }
 
-@media all and (max-width: 1881px) {
+@media all and ( (max-width: 1881px) or (max-height: 984px) ) {
     .gap-20 {
         gap: 16px;
     }
@@ -804,7 +804,7 @@ button.sqaure-btn.sqaure-btn_white:hover {
     margin: 0 !important;
 }
 
-@media all and (max-width: 1881px) {
+@media all and ( (max-width: 1881px) or (max-height: 984px) ) {
     .mb100 {
         margin-bottom: 84px;
     }
