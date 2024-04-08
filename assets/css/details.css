@@ -1,19 +1,22 @@
 .details-block {
     box-sizing: border-box;
-    padding: 0 100px;
+    /* padding: 0 100px; */
     width: 100%;
-    height: 1080px;
+    /* height: 1080px; */
+    height: 100vh;
     background-color: #004060;
 }
 
 .details-block__content {
     box-sizing: border-box;
     height: 100%;
+    width: 100%;
     padding: 0;
 }
 
 ol.details-list {
     width: 100%;
+    height: 100%;
     margin-inline: auto;
     display: flex;
     flex-wrap: wrap;
@@ -24,7 +27,8 @@ ol.details-list {
 
 ol.details-list li {
     width: calc(100% / 3);
-    height: 270px;
+    /* height: 270px; */
+    height: calc(100% / 4);
     padding: 60px 50px 50px 60px;
     border: 2px solid #005783;
     border-bottom: none;
@@ -74,7 +78,8 @@ ol.details-list li:nth-child(9n - 1)
 { background-color: #72a2c733 }
 
 .details-list__hr {
-    width: 320px;
+    /* width: 320px; */
+    width: calc(100% - 60px);
     height: 1px;
     margin: 0;
     border: none;
@@ -84,9 +89,14 @@ ol.details-list li:nth-child(9n - 1)
 .details-block__card-content {
     box-sizing: border-box;
     height: 100%;
+    width: 100%;
     padding: 60px 40px 60px 60px;
     border: 2px solid #005783;
     border-bottom: none;
+}
+
+.details-block__card-close-btn {
+    margin-left: 40px;
 }
 
 .details-block__card-close-btn img {
@@ -100,8 +110,13 @@ ol.details-list li:nth-child(9n - 1)
     margin-right: 30px;
 }
 
+.details-block__card-navigation {
+    justify-content: start;
+    width: 100%;
+}
+
 .details-block__card-hr {
-    width: 1200px;
+    width: calc(100% - 250px);
     height: 1px;
     margin: 0;
     border: none;
@@ -133,13 +148,7 @@ li.details-block__card-body::after {
 }
 
 @media all and (max-width: 1881px) {
-    .details-block {
-        padding: 0 84px;
-        height: 907px;
-    }
-    
     ol.details-list li {
-        height: 226px;
         padding: 50px 42px 42px 50px;
     }
     
@@ -149,11 +158,15 @@ li.details-block__card-body::after {
     }
     
     .details-list__hr {
-        width: 268px;
+        width: calc(100% - 50px);
     }
 
     .details-block__card-content {
         padding: 50px 33px 50px 50px;
+    }
+
+    .details-block__card-close-btn {
+        margin-left: 33px;
     }
 
     .details-block__card-close-btn img {
@@ -165,7 +178,7 @@ li.details-block__card-body::after {
     }
 
     .details-block__card-hr {
-        width: 1008px;
+        width: calc(100% - 210px);
     }
 
     li.details-block__card-body::after {
@@ -175,13 +188,7 @@ li.details-block__card-body::after {
 }
 
 @media all and (max-width: 1561px) {
-    .details-block {
-        padding: 0 70px;
-        height: 756px;
-    }
-    
     ol.details-list li {
-        height: 189px;
         padding: 42px 35px 35px 42px;
     }
     
@@ -191,11 +198,15 @@ li.details-block__card-body::after {
     }
 
     .details-list__hr {
-        width: 224px;
+        width: calc(100% - 42px);
     }
 
     .details-block__card-content {
         padding: 42px 28px 28px 42px;
+    }
+
+    .details-block__card-close-btn {
+        margin-left: 28px;
     }
 
     .details-block__card-close-btn img {
@@ -207,7 +218,7 @@ li.details-block__card-body::after {
     }
 
     .details-block__card-hr {
-        width: 840px;
+        width: calc(100% - 175px);
     }
 
     li.details-block__card-body::after {
@@ -216,13 +227,7 @@ li.details-block__card-body::after {
 }
 
 @media all and (max-width: 1295px) {
-    .details-block {
-        padding: 0 60px;
-        height: 648px;
-    }
-    
     ol.details-list li {
-        height: 162px;
         padding: 36px 30px 30px 36px;
     }
     
@@ -232,8 +237,9 @@ li.details-block__card-body::after {
     }
 
     .details-list__hr {
-        width: 192px;
+        width: calc(100% - 36px);
     }
+
     .details-block__card-content {
         padding: 36px 24px 36px 36px;
     }
@@ -247,7 +253,7 @@ li.details-block__card-body::after {
     }
 
     .details-block__card-hr {
-        width: 720px;
+        width: calc(100% - 150px);
     }
 
     li.details-block__card-body::after {
@@ -256,14 +262,8 @@ li.details-block__card-body::after {
 }
 
 @media all and (max-width: 1110px) {
-    .details-block {
-        padding: 0 50px;
-        height: 540px;
-    }
-    
     ol.details-list li {
         border: 1px solid #005783;
-        height: 135px;
         padding: 30px 25px 25px 30px;
     }
     
@@ -273,7 +273,7 @@ li.details-block__card-body::after {
     }
 
     .details-list__hr {
-        width: 160px;
+        width: calc(100% - 30px);
     }
 
     .details-block__card-content {
@@ -290,7 +290,7 @@ li.details-block__card-body::after {
     }
 
     .details-block__card-hr {
-        width: 600px;
+        width: calc(100% - 125px);
     }
 
     li.details-block__card-body::after {
@@ -316,11 +316,6 @@ li.details-block__card-body::after {
         height: 100%;
         border: none;
         padding: 50px 0;
-    }
-
-    .details-block__card-navigation {
-        justify-content: start;
-        width: 100%;
     }
     
     .details-block__card-close-btn img {
