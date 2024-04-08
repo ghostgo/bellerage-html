@@ -248,6 +248,14 @@ button.sqaure-btn.sqaure-btn_white:hover {
 
 .wrapper {
     max-width: 1560px;
+    width: 83%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wrapper-test {
+    max-width: 1560px;
     height: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -268,42 +276,9 @@ button.sqaure-btn.sqaure-btn_white:hover {
 .width-100 {
     width: 100%;
 }
-.width-80 {
-    width: 80%;
-}
-.width-70 {
-    width: 70%;
-}
-.width-60 {
-    width: 60%;
-}
-.width-45 {
-    width: 45%;
-}
-.width-35 {
-    width: 35%;
-}
-.width-30 {
-    width: 30%;
-}
-.width-25 {
-    width: 25%;
-}
-.width-20 {
-    width: 20%;
-}
-.width-15 {
-    width: 15%;
-}
-.width-10 {
-    width: 10%;
-}
 
 .height-100 {
     height: 100%;
-}
-.height-80 {
-    height: 80%;
 }
 
 /*colors*/
@@ -359,12 +334,6 @@ button.sqaure-btn.sqaure-btn_white:hover {
     text-decoration: underline;
 }
 
-/* .link {
-    text-decoration: underline;
-    color: rgb(0, 0, 238);
-    cursor: pointer;
-} */
-
 .cursor-pointer {
     cursor: pointer;
 }
@@ -380,15 +349,6 @@ button.sqaure-btn.sqaure-btn_white:hover {
 .position-relative {
     position: relative;
 }
-
-/* ::-webkit-scrollbar {
-    width: 7px;
-    height: 7px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #003651;
-} */
 
 .nobg {
     background: none;
@@ -430,7 +390,7 @@ button.sqaure-btn.sqaure-btn_white:hover {
         height: 50px;
     }
 
-    .wrapper {
+    .wrapper-test {
         max-width: 1310px;
     }
 }
@@ -463,13 +423,13 @@ button.sqaure-btn.sqaure-btn_white:hover {
         height: 42px;
     }
 
-    .wrapper {
+    .wrapper-test {
         max-width: 1092px;
     }
 
 }
 
-@media all and (max-width: 1295px) {
+@media all and ( (max-width: 1295px) or (max-height: 698px) ) {
     html {
         font-size: 60%;
     }
@@ -492,12 +452,12 @@ button.sqaure-btn.sqaure-btn_white:hover {
         width: 36px;
         height: 36px;
     }
-    .wrapper {
+    .wrapper-test {
         max-width: 936px;
     }
 }
 
-@media all and (max-width: 1110px) {
+@media all and ( (max-width: 1110px) or (max-height: 556px) ) {
     html {
         font-size: 50%;
     }
@@ -527,41 +487,11 @@ button.sqaure-btn.sqaure-btn_white:hover {
     button.sqaure-btn.sqaure-btn_white:hover {
         border: 1px solid #00334D;
     }
-    .wrapper {
+    .wrapper-test {
         max-width: 780px;
     }
 
 }
-
-/* @media all and (max-width: 1561px) {
-    html {
-        font-size: 70%;
-    }
-
-    button {
-        width: 260px;
-        height: 60px;
-        padding: 0 20px;
-    }
-
-    button.blue-btn {
-        width: 260px;
-        height: 60px;
-    }
-
-    button.short {
-        height: 50px;
-    }
-    button.sqaure-btn {
-        width: 60px;
-        height: 60px;
-    }
-
-    .wrapper {
-        max-width: 1560px;
-    }
-
-} */
 
 @media all and (max-width: 961px) {
     .display-desktop {
@@ -610,7 +540,7 @@ button.sqaure-btn.sqaure-btn_white:hover {
         height: 60px;
     }
 
-    .wrapper {
+    .wrapper-test {
         max-width: 80%;
     }
 }
@@ -740,19 +670,19 @@ button.sqaure-btn.sqaure-btn_white:hover {
     }
 }
 
-@media all and (max-width: 1561px) {
+@media all and ( (max-width: 1561px) or (max-height: 835px) ) {
     .gap-20 {
         gap: 14px;
     }
 }
 
-@media all and (max-width: 1295px) {
+@media all and ( (max-width: 1295px) or (max-height: 698px) ) {
     .gap-20 {
         gap: 12px;
     }
 }
 
-@media all and (max-width: 1110px) {
+@media all and ( (max-width: 1110px) or (max-height: 556px) ) {
     .gap-20 {
         gap: 10px;
     }
@@ -846,7 +776,7 @@ button.sqaure-btn.sqaure-btn_white:hover {
     }
 }
 
-@media all and (max-width: 1561px) {
+@media all and ( (max-width: 1561px) or (max-height: 835px) ) {
     .mb100 {
         margin-bottom: 70px;
     }
@@ -888,7 +818,7 @@ button.sqaure-btn.sqaure-btn_white:hover {
     }
 }
 
-@media all and (max-width: 1295px) {
+@media all and ( (max-width: 1295px) or (max-height: 698px) ) {
     .mb100 {
         margin-bottom: 60px;
     }
@@ -930,7 +860,7 @@ button.sqaure-btn.sqaure-btn_white:hover {
     }
 }
 
-@media all and (max-width: 1110px) {
+@media all and ( (max-width: 1110px) or (max-height: 556px) ) {
     .mb100 {
         margin-bottom: 50px;
     }

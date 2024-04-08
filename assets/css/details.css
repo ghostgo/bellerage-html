@@ -78,7 +78,6 @@ ol.details-list li:nth-child(9n - 1)
 { background-color: #72a2c733 }
 
 .details-list__hr {
-    /* width: 320px; */
     width: calc(100% - 60px);
     height: 1px;
     margin: 0;
@@ -147,7 +146,7 @@ li.details-block__card-body::after {
     align-self: flex-end;
 }
 
-@media all and (max-width: 1881px) {
+@media all and ( (max-width: 1881px) or (max-height: 984px) ) {
     ol.details-list li {
         padding: 50px 42px 42px 50px;
     }
@@ -187,7 +186,7 @@ li.details-block__card-body::after {
 
 }
 
-@media all and (max-width: 1561px) {
+@media all and ( (max-width: 1561px) or (max-height: 835px) ) {
     ol.details-list li {
         padding: 42px 35px 35px 42px;
     }
@@ -226,7 +225,7 @@ li.details-block__card-body::after {
     }
 }
 
-@media all and (max-width: 1295px) {
+@media all and ( (max-width: 1295px) or (max-height: 698px) ) {
     ol.details-list li {
         padding: 36px 30px 30px 36px;
     }
@@ -261,7 +260,7 @@ li.details-block__card-body::after {
     }
 }
 
-@media all and (max-width: 1110px) {
+@media all and ( (max-width: 1110px) or (max-height: 556px) ) {
     ol.details-list li {
         border: 1px solid #005783;
         padding: 30px 25px 25px 30px;
@@ -350,44 +349,3 @@ li.details-block__card-body::after {
         align-self: flex-end;
     }
 }
-
-/* @media all and (max-width: 1561px) {
-    .details-block {
-        padding: 0 100px;
-        height: 1080px;
-    }
-    
-    ol.details-list li {
-        height: 270px;
-        padding: 60px 50px 50px 60px;
-    }
-    
-    ol.details-list li::after {
-        bottom: 45px;
-        right: 35px;
-    }
-
-    .details-list__hr {
-        width: 320px;
-    }
-
-    .details-block__card-content {
-        padding: 60px 40px 60px 60px;
-    }
-
-    .details-block__card-close-btn img {
-        height: 35px;
-    }
-
-    .details-block__card-descr {
-        margin-right: 30px;
-    }
-
-    .details-block__card-hr {
-        width: 1200px;
-    }
-
-    li.details-block__card-body::after {
-        bottom: -60px;
-    }
-} */
