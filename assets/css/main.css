@@ -147,6 +147,14 @@ body {
     height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
+    scroll-snap-stop: always;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#main::-webkit-scrollbar {
+    display: none;
 }
 
 section {
@@ -528,12 +536,6 @@ button.sqaure-btn.sqaure-btn_white:hover {
 /* @media all and (max-width: 641px) {
     html {
         font-size: 70%;
-    }
-    button {
-        border-radius: 7px;
-        width: 200px;
-        height: 35px;
-        padding: 0 15px;
     }
 } */
 
