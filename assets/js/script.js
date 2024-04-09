@@ -1,8 +1,4 @@
-const whiteNavigationSections = [
-    'outsourcing-accounting',
-    'outsourcing-tax',
-    'principles'
-];
+const whiteNavigationSections = [2,3,4];
 
 function removeClassAll(elements, className) { 
     for (let i = 0; i < elements.length; i++) {
@@ -10,33 +6,27 @@ function removeClassAll(elements, className) {
     }
 }
 
-function highlightActiveSection(allSections) {
-    const navigation = document.querySelector('.navigation');
-    let activeSection = 'home';
+function highlightActiveSection(main) {
+    const navigation = document.querySelector('.navigation'),
+        navigationLinks = navigation.querySelectorAll('.navigation__link'),
+        scrollTop = main.scrollTop,
+        scrollHeight = main.scrollHeight,
+        segmentHeight = scrollHeight / 8,
+        segmentId = Math.round(scrollTop / segmentHeight);
+            
+        for (let i = 0; i < navigationLinks.length; i++) {
+            if (segmentId === i) {
+                navigationLinks[i].classList.add('navigation__link--active');
+            } else {
+                navigationLinks[i].classList.remove('navigation__link--active');
+            }
 
-    allSections.forEach((current) => {
-        const scrollY = window.scrollY,
-            sectionHeight = current.offsetHeight,
-            sectionTop = current.offsetTop - (sectionHeight / 2),
-            sectionId = current.getAttribute('id');
-
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        document
-            .querySelector('.navigation__link a[href*="' + sectionId + '"]')
-            .classList.add('navigation__link--active');
-        activeSection = sectionId;
-        } else {
-        document
-            .querySelector('.navigation__link a[href*="' + sectionId + '"]')
-            .classList.remove('navigation__link--active');
+            if (whiteNavigationSections.includes(segmentId)) {
+                navigation.classList.add('navigation_white');
+            } else {
+                navigation.classList.remove('navigation_white');
+            }
         }
-    });
-
-    if (whiteNavigationSections.includes(activeSection)) {
-        navigation.classList.add('navigation_white');
-    } else {
-        navigation.classList.remove('navigation_white');
-    }
 }
 
 function changeOutsourcingTabs(sectionId) {
@@ -68,11 +58,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //! NAVIGATION
 
-    const allSections = document.querySelectorAll('section[id]');
+    const main = document.querySelector('#main');
 
-    highlightActiveSection(allSections);
-    window.addEventListener('scroll', () => {
-        highlightActiveSection(allSections);
+    highlightActiveSection(main);
+    main.addEventListener('scroll', () => {
+        highlightActiveSection(main);
     });
 
     //! DETAILS
