@@ -1,8 +1,6 @@
 .details-block {
     box-sizing: border-box;
-    /* padding: 0 100px; */
     width: 100%;
-    /* height: 1080px; */
     height: 100vh;
     background-color: #004060;
 }
@@ -27,7 +25,6 @@ ol.details-list {
 
 ol.details-list li {
     width: calc(100% / 3);
-    /* height: 270px; */
     height: calc(100% / 4);
     padding: 60px 50px 50px 60px;
     border: 2px solid #005783;

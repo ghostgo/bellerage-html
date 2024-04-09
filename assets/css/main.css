@@ -140,11 +140,18 @@ body {
     font-family: 'PF DinDisplay Pro';
     height: 100%;
     scroll-behavior: smooth;
+    /* overflow: hidden; */
+}
+
+#main {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 }
 
 section {
-    height: 100%;
     width: 100%;
+    scroll-snap-align: start;
 }
 
 span {
@@ -249,13 +256,6 @@ button.sqaure-btn.sqaure-btn_white:hover {
 .wrapper {
     max-width: 1560px;
     width: 83%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.wrapper-test {
-    max-width: 1560px;
     height: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -389,10 +389,6 @@ button.sqaure-btn.sqaure-btn_white:hover {
         width: 50px;
         height: 50px;
     }
-
-    .wrapper-test {
-        max-width: 1310px;
-    }
 }
 
 @media all and ( (max-width: 1561px) or (max-height: 835px) ) {
@@ -422,11 +418,6 @@ button.sqaure-btn.sqaure-btn_white:hover {
         width: 42px;
         height: 42px;
     }
-
-    .wrapper-test {
-        max-width: 1092px;
-    }
-
 }
 
 @media all and ( (max-width: 1295px) or (max-height: 698px) ) {
@@ -451,9 +442,6 @@ button.sqaure-btn.sqaure-btn_white:hover {
     button.sqaure-btn {
         width: 36px;
         height: 36px;
-    }
-    .wrapper-test {
-        max-width: 936px;
     }
 }
 
@@ -487,10 +475,6 @@ button.sqaure-btn.sqaure-btn_white:hover {
     button.sqaure-btn.sqaure-btn_white:hover {
         border: 1px solid #00334D;
     }
-    .wrapper-test {
-        max-width: 780px;
-    }
-
 }
 
 @media all and (max-width: 961px) {
@@ -538,10 +522,6 @@ button.sqaure-btn.sqaure-btn_white:hover {
     button.sqaure-btn {
         width: 60px;
         height: 60px;
-    }
-
-    .wrapper-test {
-        max-width: 80%;
     }
 }
 
