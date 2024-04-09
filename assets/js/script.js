@@ -1,4 +1,4 @@
-const whiteNavigationSections = [3,4,5];
+const whiteNavigationSections = [2,3,4];
 
 function removeClassAll(elements, className) { 
     for (let i = 0; i < elements.length; i++) {
@@ -11,18 +11,17 @@ function highlightActiveSection(main) {
         navigationLinks = navigation.querySelectorAll('.navigation__link'),
         scrollTop = main.scrollTop,
         scrollHeight = main.scrollHeight,
-        segmentHeight = scrollHeight / 8;
+        segmentHeight = scrollHeight / 8,
+        segmentId = Math.round(scrollTop / segmentHeight);
             
-            console.log(Math.round(scrollTop / segmentHeight))
-            console.log(whiteNavigationSections.includes(i))
-
         for (let i = 0; i < navigationLinks.length; i++) {
-            if (Math.round(scrollTop / segmentHeight) === i) {
+            if (segmentId === i) {
                 navigationLinks[i].classList.add('navigation__link--active');
             } else {
                 navigationLinks[i].classList.remove('navigation__link--active');
             }
-            if (whiteNavigationSections.includes(i)) {
+
+            if (whiteNavigationSections.includes(segmentId)) {
                 navigation.classList.add('navigation_white');
             } else {
                 navigation.classList.remove('navigation_white');
