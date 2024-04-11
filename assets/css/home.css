@@ -1,13 +1,17 @@
+.fixed {
+    height: auto;
+    position: relative;
+}
+
 .navigation {
     position: absolute;
-    top: 0;
     right: -90px;
     height: calc(800% - 50px);
-    z-index: 2;
+    z-index: 999;
 }
 
 .navigation__list {
-    position: sticky;
+    position: fixed;
     top: calc(50% - 310px);
 }
 
@@ -38,14 +42,15 @@
 
 .left-side {
     position: absolute;
-    z-index: 1;
     top: 0;
     left: -120px;
     height: calc(800% - 50px);
+    z-index: 999;
+
 }
 
 .left-side__text {
-    position: sticky;
+    position: fixed;
     top: calc(50% - 310px);
 }
 
@@ -181,7 +186,6 @@
     }
     
     .navigation__list {
-        position: sticky;
         top: calc(50% - 260px);
     }
     
